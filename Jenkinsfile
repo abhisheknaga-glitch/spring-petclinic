@@ -9,7 +9,7 @@ pipeline {
 
     stage('static analysis') {
       steps {
-        sh '''./mvn clean verify sonar:sonar \\
+        sh '''./mvnw clean verify sonar:sonar \\
   -Dsonar.projectKey=Petclinic \\
   -Dsonar.projectName=\'Petclinic\' \\
   -Dsonar.host.url=http://18.143.161.107:9000 \\
